@@ -9,5 +9,7 @@ public class Main {
         float decimalNumber= 10.11F; //Size: 4 bytes
         long subscribersCount=3000000; //Size: 8 bytes
         double largeDecimal= 123.384857; //Size: 8 bytes
+        char alphabet='A'; //Size: 2 bytes
+        boolean correct= true; //Size : 1 byte
         }
     }
