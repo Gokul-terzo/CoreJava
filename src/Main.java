@@ -2,18 +2,22 @@ import java.text.NumberFormat;
 import java.util.*;
 public class Main {
     public static void main(String[] args) {
-        //Switch statement
+        //Fizz Buzz
         Scanner sc=new Scanner(System.in);
-        System.out.print("Enter your role:");
-        String role=sc.next();
-        switch (role)
+        System.out.print("Enter the number:");
+        int number=sc.nextInt();
+        if(number%5==0)
         {
-            case "admin":
-                System.out.println("You have the admin privileges");
-                break;
-            default:
-                System.out.println("You are not admin");
-                break;
+            if(number%3==0)
+                System.out.println("Fizz Buzz");
+            else
+                System.out.println("Fizz");
         }
+        else if(number%3==0)
+        {
+            System.out.println("Buzz");
+        }
+        else
+            System.out.println(number);
     }
     }
