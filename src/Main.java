@@ -1,22 +1,25 @@
 
-import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        //Multi-dimensional arrays
+        //Arithmetic expressions
+        int a=2+3;
+        System.out.println(a);
 
-        //2D arrays
-        int [][] two_d=new int[2][3]; //declaration with size
-        int[][] two_d1={{1,2,3},{4,5,6}}; //declaration with values
-        System.out.println(Arrays.deepToString(two_d)); //to convert a multi-dimensional array to printable string
-        System.out.println(Arrays.deepToString(two_d1));
+        //Explicit type conversion in expressions
+        float div=(float)10/3;
+        System.out.println(div);
 
-        //3D arrays
-        int [][][] three_d=new int[1][2][3];
-        System.out.println(Arrays.deepToString(three_d));
-
-        //Constants
-        final float g=9.81F; //To declare this variable as a constant i.e its value cannot be changed in further code.
-
+        //Increment or decrement
+        int b=3;
+        int c=b++; //gets assigned before increment
+        int d=++b; //gets incremented before assignment
+        System.out.println(c);
+        System.out.println(d);
+        //Augmented assignment
+        int x=2;
+        x=x+2; //normal assignment
+        x+=2; //augmented assignment
+        System.out.println(x);
     }
     }
