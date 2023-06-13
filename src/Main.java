@@ -2,19 +2,22 @@ import java.awt.*;
 
 public class Main {
     public static void main(String[] args) {
-        //Primitive Vs Reference
+        //String
 
-        //The primitive variables are totally independent of each other.
-        int a=10;
-        int b=a;
-        a=30;
-        System.out.println(b); //Value of B does not change!
+        //The classes in java.lang need not be imported
+        String name="Gokul"; //Short-hand notation to declare a string object as it is most commonly used class
+        System.out.println(name);
+        name=name+".S"; //Concatenation of two string using + operator
+        System.out.println(name);
 
-        //Reference variables point to the location and hence if a variable is assigned to another,they hold the same value
-
-        Point point1=new Point(1,1);
-        Point point2=point1; //The same address is assigned to point2 object
-        point1.x=5;
-        System.out.println(point2); //The value of point2 is coherent with that of point1.
-        }
+        //String methods
+        System.out.println(name.replace('.',' ')); //doesn't change the actual string name
+        System.out.println(name);
+        System.out.println(name.toLowerCase());
+        System.out.println(name.toUpperCase());
+        System.out.println(name.length());
+        System.out.println(name.endsWith("S"));
+        name=" Gokul S";
+        System.out.println(name.trim()); //removes spaces before and after string
+    }
     }
