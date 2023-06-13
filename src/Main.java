@@ -1,14 +1,20 @@
+import java.net.ServerSocket;
 import java.text.NumberFormat;
 import java.util.*;
 public class Main {
     public static void main(String[] args) {
-        //Reading input
+        //Mortgage calculator
         Scanner sc=new Scanner(System.in);
-        System.out.print("Enter your age:");
-        byte age=sc.nextByte();
-        System.out.println("Your age is"+age);
-        System.out.println("Enter your full name");
-        String fullName=sc.nextLine(); //To accept spaces
-        System.out.println(fullName.trim());
+        System.out.print("Principal:");
+        long principal=sc.nextLong();
+        System.out.print("\nAnnual rate of interest:");
+        float rate=sc.nextFloat();
+        rate/=100;
+        rate/=12;
+        System.out.print("\nNumber of years:");
+        int year=sc.nextByte();
+        year*=12;
+        double mortgage=principal*((rate*Math.pow((1+rate),year))/(Math.pow((1+rate),year)-1));
+        System.out.print("Mortgage:"+NumberFormat.getCurrencyInstance().format(mortgage));
     }
     }
