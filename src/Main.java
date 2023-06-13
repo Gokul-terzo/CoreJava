@@ -1,16 +1,14 @@
 import java.text.NumberFormat;
-
+import java.util.*;
 public class Main {
     public static void main(String[] args) {
-        //Number formatting
-
-        //Currency
-        NumberFormat currency=NumberFormat.getCurrencyInstance(); //cannot use new as it is a abstract class
-        String result=currency.format(30000);
-        System.out.println(result);
-        System.out.println(NumberFormat.getCurrencyInstance().format(100000)); //method chaining
-
-        //Percentage
-        System.out.println(NumberFormat.getPercentInstance().format(0.01));
+        //Reading input
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter your age:");
+        byte age=sc.nextByte();
+        System.out.println("Your age is"+age);
+        System.out.println("Enter your full name");
+        String fullName=sc.nextLine(); //To accept spaces
+        System.out.println(fullName.trim());
     }
     }
