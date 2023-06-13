@@ -2,17 +2,14 @@ import java.text.NumberFormat;
 import java.util.*;
 public class Main {
     public static void main(String[] args) {
-        //Break and continue
-        Scanner sc=new Scanner(System.in);
-        String input="";
-        do{
-            System.out.println("Enter the input");
-            input=sc.next();
-            if(input.equals("pass"))
-                continue;
-            if(input.equals("quit")||input.equals("Quit"))
-                break;
-            System.out.println("Input is:"+input);
-        }while(!input.equals("quit")&&!input.equals("Quit"));
+        //For each loop
+        String[] fruits={"Mango","Apple","Orange"};
+        //for loop
+        for(int i=0;i< fruits.length;i++)
+            System.out.println(fruits[i]);
+
+        //for each loop
+        for(String s:fruits)
+            System.out.println(s);
     }
     }
